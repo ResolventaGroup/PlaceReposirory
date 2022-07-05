@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Tests\Unit\Module\PlaceRepository\Validator;
+namespace Tests;
 
-use App\Module\PlaceRepository\PlaceRepositoryInterface;
-use App\Module\PlaceRepository\Validator\PlaceIsExists;
-use App\Module\PlaceRepository\Validator\PlaceIsExistsValidator;
-use App\Module\PlaceRepository\PlaceRepositoryMock;
-use App\Tests\Unit\Helper\Mock\ExecutionContextMock;
-use App\Tests\Unit\TestCase;
+use InvalidArgumentException;
+use PHPUnit\Framework\TestCase;
+use Tests\Helpers\ExecutionContextMock;
+use Resolventa\PlaceRepository\PlaceRepositoryInterface;
+use Resolventa\PlaceRepository\PlaceRepositoryMock;
+use Resolventa\PlaceRepository\Validator\PlaceIsExists;
+use Resolventa\PlaceRepository\Validator\PlaceIsExistsValidator;
 use Symfony\Component\Validator\Constraint;
 
 final class PlaceIsExistsValidatorTest extends TestCase
@@ -19,7 +20,6 @@ final class PlaceIsExistsValidatorTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
-
         $this->executionContext = new ExecutionContextMock();
         $this->validator = new PlaceIsExistsValidator(new PlaceRepositoryMock());
         $this->validator->initialize($this->executionContext);
@@ -52,7 +52,7 @@ final class PlaceIsExistsValidatorTest extends TestCase
 
     public function testUnsupportedConstraint(): void
     {
-        $this->expectException(\InvalidArgumentException::class);
+        $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage('Constraint must be instance of');
 
         $validator = new PlaceIsExistsValidator($this->createMock(PlaceRepositoryInterface::class));
