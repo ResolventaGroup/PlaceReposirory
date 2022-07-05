@@ -5,6 +5,7 @@ namespace Resolventa\PlaceRepository\Google;
 use Resolventa\PlaceRepository\Place;
 use Resolventa\PlaceRepository\PlaceRepositoryInterface;
 use GuzzleHttp\Client;
+use Psr\Http\Client\ClientInterface;
 use Psr\Log\LoggerInterface;
 
 final class GoogleGeocodePlaceRepository implements PlaceRepositoryInterface
@@ -12,7 +13,7 @@ final class GoogleGeocodePlaceRepository implements PlaceRepositoryInterface
     private const BASE_URL = 'https://maps.googleapis.com/maps/api/';
 
     private string $googleApiKey;
-    private Client $client;
+    private ClientInterface $client;
     private LoggerInterface $logger;
 
     public function __construct(string $googleApiKey, LoggerInterface $logger)
