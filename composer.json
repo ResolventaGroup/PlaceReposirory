@@ -1,0 +1,30 @@
+{
+    "name": "resolventa/placerepository",
+    "description": "Place Repository",
+    "keywords": ["placerepository", "php"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dmitry Pankin",
+            "email": "dpankin@gmail.com"
+        }
+    ],
+    "type": "library",
+    "require": {
+        "php": ">=8.1",
+        "guzzlehttp/guzzle": "^7.4",
+        "nesbot/carbon": "^2.58",
+        "symfony/validator": "^6.1",
+        "psr/cache": "^3.0",
+        "psr/log": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Resolventa\\PlaceRepository\\": "src/",
+            "Tests\\": "tests/"
+        }
+    }
+}
