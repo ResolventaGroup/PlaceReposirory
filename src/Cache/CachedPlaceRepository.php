@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Module\PlaceRepository\Cache;
+namespace Resolventa\PlaceRepository\Cache;
 
-use App\Module\PlaceRepository\Place;
-use App\Module\PlaceRepository\PlaceRepositoryInterface;
+use Resolventa\PlaceRepository\Place;
+use Resolventa\PlaceRepository\PlaceRepositoryInterface;
 use Carbon\Carbon;
 use Psr\Cache\CacheItemPoolInterface;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Module\PlaceRepository;
+namespace Resolventa\PlaceRepository;
 
 interface PlaceRepositoryInterface
 {

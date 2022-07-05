@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Module\PlaceRepository\Google;
+namespace Resolventa\PlaceRepository\Google;
 
-use App\Module\PlaceRepository\Place;
-use App\Module\PlaceRepository\PlaceRepositoryInterface;
+use Resolventa\PlaceRepository\Place;
+use Resolventa\PlaceRepository\PlaceRepositoryInterface;
 use GuzzleHttp\Client;
 use Psr\Log\LoggerInterface;
 

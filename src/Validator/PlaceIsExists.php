@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Module\PlaceRepository\Validator;
+namespace Resolventa\PlaceRepository\Validator;
 
 use Symfony\Component\Validator\Constraint;
 
